@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+<meta http-equiv="expires" content="0">
+<link rel="icon" href="data:image/ico;base64,aWNv">
+<title>结界用户服务协议</title>
+<style>
+body{ font-size: 17px;}
+div { width: 100%; padding: 0 16px; box-sizing: border-box; }
+ul,li{padding:0;margin:0;}
+dt,dd,dl{ font-style: normal; margin:0; }
+dt{ text-align: center; }
+.mod_menu{padding: 0;}
+.menu_title{font-size: 1.5em; text-indent: 0; font-weight: 700; margin: 0; padding:0;}
+.menu_item{list-style: none;font-weight: 700; line-height: 1.5; padding: 6px 0;cursor: pointer; text-decoration: underline;}
+.red{ color: red; }
+.blue{color: blue;}
+.gray{ color: #939393;}
+.strong{ font-weight: 700; }
+.under{ text-decoration: underline; }
+p{ text-indent: 2em; }
+h1{font-size: 1.3em;}
+h3{font-weight:400;font-size:1em;}
+.agreement{ margin-bottom: 30px; }
+.scroll_table{ width: 100%; overflow-x: auto; padding:0;  box-sizing: border-box;}
+.scroll_table .scroller{ width: 100%; overflow-x: auto; padding:0; }
+.scroll_table .scroller .tit{ padding: 20px 0; font-weight: 700; }
+table{ font-size: 14px; padding:0; margin:0; border-top: 1px solid #000000; border-left: 1px solid #000000;  border: 0 none;}
+table td, table th{ word-break: break-all; word-wrap: break-word;}
+table thead{ height: 40px; color: #FFFFFF;}
+table thead th{ background: #1b60f5; font-size: 14px; }
+table thead th:nth-child(1){ border-radius: 1.33vw 0 0 0; }
+table thead th.last{ border-radius: 0 1.33vw 0 0; }
+
+table tbody td{ border-bottom: 1px dashed #cdced6; height: 50px; text-align: center; padding: 0 1.33vw; color: #4d4d65; box-sizing: border-box; }
+table tbody td{ border-left: 1px dashed #cdced6; }
+table tbody td:last-child{ border-right: 1px dashed #cdced6;}
+</style>
+<script>window.webVer = '3.2.2';</script>
+<script>function getVersion(n,t,i){var r=null;if(window.XMLHttpRequest&&!window.ActiveXObject)r=new XMLHttpRequest;else if(window.ActiveXObject)try{r=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){try{r=new ActiveXObject("Msxml2.XMLHTTP")}catch(f){r=null}}return r.onreadystatechange=function(){if(r.readyState==4)if(r.status==200||r.status==0){var n=r.responseText;t&&t(n,r);r=null}else i&&i()},r.open("GET",n,!1),r.send(null),r}function getAbsoluteURL(n){var i=document.createElement("a"),t="",r=location.pathname;return/^\/{2,}/.test(r)&&r===n?n=n.replace(/^\/{2,}/,"/"):r==="/"&&(n="/index.html"),i.href=n,t=i.href,t=t.replace(/[\/]+[\/]/g,"/").replace(":/","://"),i=null,t}function getClearCacheUrl(n,t,i){var t=(t||"_t")+"=",s=new RegExp(t+"(\\d+\\.)*\\d+"),f=i||+new Date,e;if(n.indexOf(t)>-1)return n.replace(s,t+f);var r=[],u=n.split("#"),o=u[0],h=u[1]?"#"+u[1]:"";return o.indexOf("?")>-1?(e=o.split("?"),r.push(e[0]),r.push("?"+t+f),r.push("&"+e[1])):(r.push(u[0]),r.push("?"+t+f)),r.push(h),r.join("")}function fixedIOS(){var t=navigator.userAgent.toLowerCase(),n=null;(t.indexOf("iphone")>=0||t.indexOf("ipad")>=0)&&(document.addEventListener("touchmove",function(n){n.touches.length>1&&n.preventDefault()},{passive:!1}),document.addEventListener("touchend",function(t){var i=(new Date).getTime(),r;if(n=n||i+1,r=i-n,r<500&&r>0)return t.preventDefault(),!1;n=i},{passive:!1}),document.addEventListener("gesturestart",function(n){n.preventDefault()},{passive:!1}))}(function(){if(fixedIOS(),window.webVer){var n=getAbsoluteURL(location.pathname);n+="?t="+(new Date).getTime();getVersion(n,function(n){if(n){var t=n.toString().match(/window\.webVer\s*=\s*('|")(.*?)\1/);t&&(t=t[2]);console.log("v"+t);window.webVer!=t&&location.replace(getClearCacheUrl(location.href,"_t",t))}})}})();</script>
+<script>function getElementTop(n){for(var i=n.offsetTop,t=n.offsetParent;t!==null;)i+=t.offsetTop,t=t.offsetParent;return i}function scrollToEl(n,t,i){n&&(t&&(location.hash=(i?i:"Item")+t),window.scrollTo({top:getElementTop(n),behavior:"smooth"}))}function manualScrollEl(n,t){var i=scrollMenuList[n-1];scrollToEl(i,n-1,t)}function generateMenu(n){var r=document.getElementsByTagName("h2"),f=document.getElementById(n),u,t,i;if(f){for(u=document.createDocumentFragment(),t=0;t<r.length;t++)(function(){var i=r[t],f=t+1,n=document.createElement("li");n.innerText=i.innerText;n.className="menu_item";n.onclick=function(){scrollToEl(i,f)};u.appendChild(n)})(t);f.appendChild(u);i=Number(location.hash.replace(/#Item(\d+)$/i,"$1"));i>0&&r[i-1]&&setTimeout(function(){scrollToEl(r[i-1],i)},10)}}function generateScrollList(){for(var t,i,u=document.getElementsByTagName("div"),n=[],f=1,r=0;r<u.length;r++)t=u[r],t.className.indexOf("scroll_table")>-1&&(t["data-tag"]="ScrollItem"+f,n.push(t),f++);return i=Number(location.hash.replace(/#ScrollItem(\d+)$/i,"$1")),i>0&&n[i-1]&&setTimeout(function(){manualScrollEl(i,"ScrollItem")},10),scrollMenuList=n,n}var scrollMenuList=[];</script>
+</head>
+<body>
+  <div class="agreement" id="agreement">
+    <h1 style="text-align: center;">结界用户服务协议</h1>
+    <h3 class="strong" style="text-align: right;">生效日期【2022】年【 7 】月【 18 】日</h3>
+
+    <p>欢迎使用结界app（以下简称“结界”）。结界是一款文字转图片及交流、分享的互联网产品，仅供您个人非商业用途。您只能将结界用于上述目的。</p>
+    <p>为了保障您的权益，请在使用服务之前，详细阅读本协议的所有内容，特别是加粗部分。未成年人则应在监护人陪同下阅读。如您使用结界，即表示您与结界已达成协议，自愿接受本协议的所有内容。如您不同意本协议，这将导致结界无法为您提供完整的产品和服务，您也可以选择停止使用。如您自主选择同意或使用结界及相关服务，则视为您已充分理解本协议，并同意作为本协议的一方当事人接受本协议以及其他与结界及相关服务相关的协议和规则（包括但不限于《结界隐私政策》）的约束。</p>
+
+    <!--=S 目录 -->
+    <div class="mod_menu">
+      <p class="menu_title">本政策将帮助您了解以下内容：</p>
+      <ul id="menu"></ul>
+    </div>
+    <!--=E 目录 -->
+
+
+    <h2>一、账号及注册</h2>
+    <p>1.您注册使用结界服务账号的信息应当是您的个人真实身份信息，并应保证您在注册当时所提供的个人资料信息的真实、完整、有效，并且您应当依据法律规定和本协议约定对所提供的信息承担相应的法律责任。</p>
+    <p>2.结界有权审查您注册所提供的信息是否真实、有效，若您提供给结界的帐号注册资料不准确，不真实，含有违法或不良信息的，结界有权不予注册。对于冒用关联机构或社会名人注册帐号名称的，结界有权注销该帐号，并向政府主管部门进行报告。</p>
+    <p>3.您应妥善保管您的帐号及密码，并正确、安全地使用其帐号及密码，不得将账号赠与、借用、租用、转让或售卖。如果您未保管好自己的账号和密码而给结界和他人的民事权利造成损害的，您应当负全部责任。</p>
+    <p>4.您在注册和使用结界账号时应当遵守法律法规、社会主义制度、国家利益、公民合法权益、公共秩序、社会道德风尚和信息真实性等七条底线，不得在注册资料中出现任何违法违规或侵权信息。若您的账号有前述问题的，结界有权采取通知限期改正、暂停使用等措施。</p>
+    <p>如您发现您的帐号或密码被他人非法使用或有使用异常的情况的，应及时根据结界公布的处理方式通知结界。由于结界无法对非法使用您的账号的行为作出甄别，在您未进行投诉或提出帐号申诉等方式明确告知结界帐号被他人使用或信息数据泄漏等情况并提供相关证明材料前，结界有理由相信该帐号行为是您使用帐号的行为。</p>
+    <p>5.对于用户使用结界帐号而产生的一切数据，包括但不限于登录记录、消费记录、客户服务记录以及用户在使用结界中创造的社会网络内容等，归结界所有。发生争议时，用户同意以结界的系统数据为准。</p>
+    <p>6.如用户需要采用提现功能，应依照法律法规以及结界的规定配合提供信息并办理相关手续（包括但不限于配合办理依法缴纳税收相关事宜）。</p>
+
+    <h2>二、使用规则</h2>
+    <p>1.您在使用结界的过程中，不得利用结界制作、上传、复制、传送、传播或转载如下内容：</p>
+    <p>（1）反对中华人民共和国宪法所确定的基本原则的；</p>
+    <p>（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+    <p>（3）损害国家荣誉和利益的；</p>
+    <p>（4）煽动民族仇恨、民族歧视，破坏民族团结的；</p>
+    <p>（5）破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+    <p>（6）散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+    <p>（7）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
+    <p>（8）侮辱或者诽谤他人，侵害他人合法权益的；</p>
+    <p>（9）含有中华人民共和国法律、行政法规禁止的其他内容的。</p>
+    <p>2.您不得利用结界平台或服务实施包括但不限于以下行为：</p>
+    <p>（1）创作、复制、发布、传播法律法规禁止，以及侵犯其他用户或第三方知识产权或其他合法权益的信息和作品；</p>
+    <p>（2）通过非结界开发、授权或认可的第三方兼容软件、系统登录或使用结界平台或服务，或针对结界平台和相关服务使用非结界开发、授权或认证的插件；</p>
+    <p>（3）删除结界网站或软件及其他副本上所有关于版权的信息、内容；</p>
+    <p>（4）未经结界同意，对结界网站或软件进行反向工程、反向汇编、反向编译或以其他非法方式自结界平台获取源代码等；</p>
+    <p>（5）对于结界网站或软件相关信息等，未经结界同意，擅自实施包括但不限于下列行为：使用、出租、出借、复制、修改、链接、转载、汇编、发表、出版，建立镜像站点、擅自借助结界发展与之有关的衍生产品、作品、服务、插件、外挂、兼容、互联等；</p>
+    <p>（6）发布破坏结界网站或软件的内容，发布指向包含病毒或恶意软件的链接，使用管理员密码或者冒充管理员，重复发布垃圾信息，使用替代账号或外部组织来操控结界数据；</p>
+    <p>（7）其他违反法律法规、政策及公序良俗、社会公德或干扰结界正常运营和侵犯其他用户或第三方合法权益内容的行为。</p>
+    <p>3.在任何情况下，针对您上传的作品 结界有权根据作品的相关法律法规及政策形势，不将该作品对用户公布或向用户提供。</p>
+    <p class="strong">4.未经结界允许，您不得在结界平台内发布、推荐除结界、结界及其关联公司产品或服务以外的任何内容的广告或商业性信息。您不得以任何理由或方式拉拢其他用户去其他同类竞争网站开展或使用服务。</p>
+    <p class="strong">5.您不得利用结界进行任何形式的洗钱活动。结界将严密监控此类行为，并有权对多个定向账户中异常的、数额较大的虚拟资产流转进行调查，并有权配合主管机关的调查提交用户的身份资料、有关账户的交易记录等信息。</p>
+    <p class="strong">6.您理解并承诺，非经结界同意，您不能利用结界平台或服务进行销售或其他商业用途。如您有需要将结界平台或服务用于商业用途，应书面通知结界并获得结界的明确授权。</p>
+
+    <h2>三、第三方链接</h2>
+    <p>结界可能接入或链接至第三方网站或服务，因该等第三方网站或服务由相关的第三方负责运营，结界无法对该等第三方网站或服务进行控制。您使用该等第三方网站或服务（包括您向该等第三方提供的任何信息），须受第三方自己的服务条款及信息保护声明（而非本政策）约束，您需要仔细阅读其条款。如您发现这些第三方网站或服务存在风险时，建议您终止相关操作以保护您的合法权益，如您因使用或依赖上述第三方网站或服务所导致的损失或损害，结界不承担任何责任。</p>
+
+    <h2>四、知识产权</h2>
+    <p>1.结界对下述内容拥有完整和全部的知识产权：结界的文字、图片、视频、音频、软件等元素，结界服务标志、标识以及专利权。</p>
+    <p>2.用户只能在本协议以及相应的授权许可协议授权的范围（“知识产权的使用范围”）使用结界的知识产权，未经授权超越“知识产权的使用范围”的使用即构成对结界知识产权的侵权，结界对此等侵权行为有权采取包括但不限于警告、诉讼、仲裁等措施来维护自身合法权益。</p>
+    <p>3.用户承诺并保证，用户对其在使用结界服务时上传、发布的文字、图片、视频、音频（包括但不限于语音和音乐作品）、软件以及表演等信息，有相应合法的权利（包括但不限于用户本人为著作权人以及用户获得了合法授权的情况）。且用户同意，其在结界平台上发表、上传的行为是对结界服务平台的授权，用户确认其发表、上传的信息的非独占性，同时是对结界的永久性的授权，该授权可转授权。结界可将前述信息在结界旗下的服务平台上免费使用，也可再次编辑后免费使用，也可以由结界授权给合作方使用。用户承诺和保证，其上传和发布的内容符合相关法律和法规的要求，不侵犯任何第三方的肖像权、名誉权、知识产权等权利或利益，用户就其所上传、发布、传播的内容独立承担全部法律责任。用户同意，结界有权对用户上传、发布的信息依照法律、相关规定以及依据本协议进行删除或屏蔽，或在收到侵权投诉通知后删除此类信息。</p>
+    <p>4.若结界软件内的信息以及其他用户上传、存储、传播的信息存在侵犯第三人知识产权的情形，被侵权人可以向结界提供的投诉通道进行投诉举报，结界将有权采取合理措施对上述侵权行为做出处置。</p>
+
+    <h2>五、免责声明</h2>
+    <p>1.您在非登录模式下可能无法使用结界，且一旦您退出网站或关闭页面，或更换终端设备的，您在非登录模式下相关数据可能都将会被清空，且无法查询和恢复。如因此造成您任何损失的，结界不承担责任。</p>
+    <p>2.用户在结界中发布的任何内容、信息等并不反映或代表结界的观点、立场或政策，结界对此不承担任何责任，包括但不限于任何内容发生任何错误或纰漏以及衍生的任何损失或损害。结界有权（但无义务）自行拒绝或删除结界上的任何内容。您如使用上述内容, 应自行承担风险。</p>
+    <p class="strong">3.若因您自身的原因（包括但不限于违反法律法规的规定、违反本协议内容等）导致结界对注册账号采取封停或注销措施的，您将不能继续使用注册帐号，结界无须因此对您承担任何形式的赔偿或补偿责任。</p>
+    <p class="strong">4.发生下列情形之一时，结界可能需要变更、中断或终止服务器所提供之全部或部分服务，对因此而产生的不便或损害，结界无需对您或第三人承担任何责任：</p>
+    <p class="strong">（1）为了更好地为您提供专业、便捷的服务而进行的网站和服务器的定期检查或施工，更新软硬件等；</p>
+    <p class="strong">（2）网络提供商线路或其他故障；</p>
+    <p class="strong">（3）在紧急情况之下依照法律的规定或为您及第三者之人身安全；</p>
+    <p class="strong">（4）执行行政/司法机关的命令；</p>
+    <p class="strong">（5）第三方原因或其他不可抗力的情形。</p>
+    <p>5.结界可能会在提供服务的过程中以各种方式投放商业广告等商业信息，您同意结界有权通过向您的邮箱发送电子邮件、向您的账号发送私信或其他方式向您发送前述信息。</p>
+
+    <h2>六、付费服务</h2>
+    <p class="strong">1. 标准资费请见支付页面，用户付费后获得的权益不得转让给第三人。</p>
+    <p class="strong">2. 用户在进行消费时，请事先了解消费价格及事项；如您是未成年人，请在监护人的认可后进行消费。</p>
+    <p>3.结界平台有权根据实际情况随时调整费用标准。对于结界服务资费标准的任何调整，结界将提前进行公示，并在约定之日起生效。在约定日期前按原资费标准购买服务的用户，其服务在资费调整前购买的期限内不受影响 ，且无需补充缴纳差额；在约定日期后进行支付，购买结界服务的用户，应按照更新后的资费标准进行支付。</p>
+    <p>4. 会员应在公示期内对结界平台公布更新、修订后的服务条款进行确认，对于服务条款及服务费用变更，用户有权作如下选择：</p>
+    <p>(1) 不再继续使用结界服务。</p>
+    <p>(2)用户不作出任何表示并继续使用结界服务，则视为用户接受服务条款及服务费用的变更。</p>
+    <p>(3) 如用户同意变更的内容，则公示期过后，结界平台将以最新的服务条款和服务价格为标准向用户提供服务。</p>
+
+    <h2>七、隐私制度</h2>
+    <p class="strong">1.结界将按照平台所公布的《结界隐私政策》收集、存储、使用、披露和保护用户的个人信息。请您完整阅读上述隐私政策，以帮助您更好地保护您的个人信息。</p>
+    <p>2.请用户注意勿在使用结界服务中透露自己的各类财产帐户、银行卡、信用卡、第三方支付账户及对应密码等重要信息、资料，否则由此带来的任何损失由用户自行承担。</p>
+    <p>3.用户在使用结界服务时不可将自认为隐私的信息发表、上传至结界，也不可将该等信息通过结界的服务传播给其他人。若因用户自身的行为引起的隐私泄漏，由用户承担责任。</p>
+    <p>4.结界在提供服务时可能会搜集用户信息，结界会明确告知用户，通常信息仅限于用户姓名、性别、年龄、出生日期、身份证号、兴趣爱好等。</p>
+    <p>5.用户知悉并了解，就下列相关事宜的发生，结界不承担任何法律责任：</p>
+    <p>（1）结界根据法律规定或相关政府、司法机关的要求提供您的个人信息；</p>
+    <p>（2） 由于用户将用户账号信息和密码等重要信息告知他人或与他人共享注册帐户，由此导致的任何个人信息的泄漏，或其他非因结界的原因导致的个人信息的泄漏；</p>
+    <p>（3）任何由于黑客攻击、电脑病毒侵入造成的信息泄漏；</p>
+    <p>（4）因不可抗力导致的信息泄漏；
+
+    <h2>八、违约处理</h2>
+    <p class="strong">1.如发生下列任何一种情形：</p>
+    <p class="strong">（1）违反本协议中规定的任何一项规则；</p>
+    <p class="strong">（2）违反结界发布及不定时更新的平台规则；</p>
+    <p class="strong">（3）提供的个人资料不真实或存在违法、不良信息；</p>
+    <p class="strong">（4）包含但不仅限于以上所述内容的其他“危害结界利益”的行为。</p>
+    <p class="strong">结界有权视严重情况，对用户同时采取以下单项或多项措施：</p>
+    <p class="strong">（1）暂停/终止提供全部或部分服务；</p>
+    <p class="strong">（2）删除违规内容；</p>
+    <p class="strong">（3）暂时/永久封禁账号；</p>
+    <p class="strong">（4）扣除、清空部分或全部虚拟财产。</p>
+    <p class="strong">基于可能存在上述情形，结界有权根据相关法律法规的要求删除您的个人信息或做匿名化处理，建议您不定期的对您发布的作品进行备份。</p>
+    <p class="strong">2.若结界认为您的账号内的虚拟财产（包括但不限于虚拟礼物、虚拟道具、虚拟币等）来源异常，结界有权对账号进行暂时冻结并进行调查。如调查后判定存在来源异常情形，则结界有权将来源异常部分进行没收，情节严重者将进行账号封禁；来源异常情形包含但不限于：非结界认可的渠道充值，利用系统BUG、漏洞或外挂获得，其他非正当方式来源获得等。</p>
+    <p class="strong">3.您违反本协议约定、相关服务条款或平台规范的，导致第三方向结界、结界及其关联公司、合作公司提出索赔等要求的，您同意承担全部法律责任，包括但不限于赔偿金、罚金、和解费、诉讼仲裁费、合理的律师费支出等，并同意赔偿因此给结界造成的损害。具体承担赔偿责任的方式包括但不限于根据结界的书面通知向其支付与损失等额的资金、以累计的虚拟资产抵偿相关损失等。</p>
+    <p class="strong">4.结界对知识产权尽合理、审慎的义务，当第三方认为您上传或者发表于结界的作品侵犯其权利，并根据《信息网络传播权保护条例》或者相关法律规定向结界发送权利通知书时，您同意结界有权不事先通知您的情况下删除涉嫌侵权的作品。</p>
+
+    <h2>九、未成年人使用条款</h2>
+    <p class="strong">1.若您未满18周岁，应在监护人同意和指导下访问和/或使用结界的网络服务，并且您的监护人允许您使用结界的网络服务且同意本协议的各项条款。如果您是未成年人的监护人，即表示您同意约束未成年人遵守这些条款使用结界的网络服务。特别地，如您未满18周岁或不具备完全民事行为能力，您应在监护人的同意和指导下使用结界的充值服务，使用充值服务而产生的一切后果，由您及您的监护人承担。</p>
+    <p>2.未成年应在监护人的指导下合理安排时间使用结界的网络服务，注意避免沉迷于网络，影响正常的学习生活。</p>
+
+    <h2>十、服务的变更、中断和终止</h2>
+    <p>1、您理解并同意，结界为了服务整体运营的需要在不断变更和改进服务。结界可能会增加或删除部分服务，也可能暂停或彻底停止本项服务。您同意结界有权行使上述权利且不需对您或第三方承担任何责任。</p>
+    <p>2、结界出于自身商业决策等原因，或者根据自身的判断，认为您的行为涉嫌违反本协议内容或相应使用规则等内容，或涉嫌违反法律法规的规定的，则结界有权中止、中断或终止向您提供服务。如有此等情形发生，结界有权根据相关法律法规的要求删除您的个人信息或做匿名化处理。</p>
+    <p>3、若因结界自身原因决定终止运营服务的，您应采取相应的措施自行处理账号，包括但不限于注销或停止使用帐号等相关事宜。</p>
+
+    <h2>十一、不可抗力</h2>
+    <p>结界对不可抗力导致的损失不承担责任。不可抗力包括：自然灾害、法律法规或政府指令的变更，因网络服务特性而特有的原因，例如境内外基础电信运营商的故障、计算机或互联网相关技术缺陷、突发性的软硬件设备及电子通信设备故障、互联网覆盖范围限制、计算机病毒、黑客攻击等因素，及其他合法范围内的不能预见、不能避免并不能克服的客观情况。</p>
+
+    <h2>十二、其他约定</h2>
+    <p>1.通知：所有发给您的通知都可通过电子邮件、常规的信件或在网站/客户端显著位置公告的方式进行传送。</p>
+    <p>2.本协议适用中华人民共和国的法律（不含冲突法）。当本协议的任何内容与中华人民共和国法律相抵触时，应当以法律规定为准，同时相关内容将按法律规定进行修改或重新解释，而本协议其他部分的法律效力不变。</p>
+    <p>3.凡因本协议引起的或与本协议有关的任何争议，双方应尽量友好协商解决；协商不成的，任何一方均有权向被告住所地人民法院提起诉讼解决。</p>
+    <p>4.本协议自发布之日起实施，并构成您和结界之间的共识。</p>
+    <p>5.如本协议中的任何条款因任何原因被判定为完全或部分无效或不具有执行力的，本协议的其他条款仍应有效并且有执行力。结界不行使、未能及时行使或者未充分行使本协议或者按照法律规定所享有的权利，不应被视为放弃该权利，也不影响结界在将来行使该权利。</p>
+    <p>6.如果您对本协议内容有任何疑问，请发送邮件至我们的客服邮箱：【jiejieemail2@163.com】</p>
+  </div>
+
+  <script>
+    // menu list
+    generateMenu('menu');
+  </script>
+</body>
+</html>

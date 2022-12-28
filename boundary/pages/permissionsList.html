@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="renderer" content="webkit" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="format-detection" content="email=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> 
+<meta http-equiv="expires" content="0">
+<link rel="icon" href="data:image/ico;base64,aWNv">
+<title>系统权限使用清单</title>
+<style>
+body{ font-size: 17px;}
+div { width: 100%; padding: 0 16px; box-sizing: border-box; }
+ul,li{padding:0;margin:0;}
+dt,dd,dl{ font-style: normal; margin:0; }
+dt{ text-align: center; }
+.mod_menu{padding: 0;}
+.menu_title{font-size: 1.5em; text-indent: 0; font-weight: 700; margin: 0; padding:0;}
+.menu_item{list-style: none;font-weight: 700; line-height: 1.5; padding: 6px 0;cursor: pointer; text-decoration: underline;}
+.red{ color: red; }
+.blue{color: blue;}
+.gray{ color: #939393;}
+.strong{ font-weight: 700; }
+.under{ text-decoration: underline; }
+p{ text-indent: 2em; }
+h1{font-size: 1.3em;}
+h3{font-weight:400;font-size:1em;}
+.agreement{ margin-bottom: 30px; }
+.scroll_table{ width: 100%; overflow-x: auto; padding:0;  box-sizing: border-box;}
+.scroll_table .scroller{ width: 100%; overflow-x: auto; padding:0; }
+.scroll_table .scroller .tit{ padding: 20px 0; font-weight: 700; }
+table{ font-size: 14px; padding:0; margin:0; border-top: 1px solid #000000; border-left: 1px solid #000000;  border: 0 none;}
+table td, table th{ word-break: break-all; word-wrap: break-word;}
+table thead{ height: 40px; color: #FFFFFF;}
+table thead th{ background: #1b60f5; font-size: 14px; }
+table thead th:nth-child(1){ border-radius: 1.33vw 0 0 0; }
+table thead th.last{ border-radius: 0 1.33vw 0 0; }
+
+table tbody td{ border-bottom: 1px dashed #cdced6; height: 50px; text-align: center; padding: 0 1.33vw; color: #4d4d65; box-sizing: border-box; }
+table tbody td{ border-left: 1px dashed #cdced6; }
+table tbody td:last-child{ border-right: 1px dashed #cdced6;}
+</style>
+<script>window.webVer = '3.2.2';</script>
+<script>function getVersion(n,t,i){var r=null;if(window.XMLHttpRequest&&!window.ActiveXObject)r=new XMLHttpRequest;else if(window.ActiveXObject)try{r=new ActiveXObject("Microsoft.XMLHTTP")}catch(u){try{r=new ActiveXObject("Msxml2.XMLHTTP")}catch(f){r=null}}return r.onreadystatechange=function(){if(r.readyState==4)if(r.status==200||r.status==0){var n=r.responseText;t&&t(n,r);r=null}else i&&i()},r.open("GET",n,!1),r.send(null),r}function getAbsoluteURL(n){var i=document.createElement("a"),t="",r=location.pathname;return/^\/{2,}/.test(r)&&r===n?n=n.replace(/^\/{2,}/,"/"):r==="/"&&(n="/index.html"),i.href=n,t=i.href,t=t.replace(/[\/]+[\/]/g,"/").replace(":/","://"),i=null,t}function getClearCacheUrl(n,t,i){var t=(t||"_t")+"=",s=new RegExp(t+"(\\d+\\.)*\\d+"),f=i||+new Date,e;if(n.indexOf(t)>-1)return n.replace(s,t+f);var r=[],u=n.split("#"),o=u[0],h=u[1]?"#"+u[1]:"";return o.indexOf("?")>-1?(e=o.split("?"),r.push(e[0]),r.push("?"+t+f),r.push("&"+e[1])):(r.push(u[0]),r.push("?"+t+f)),r.push(h),r.join("")}function fixedIOS(){var t=navigator.userAgent.toLowerCase(),n=null;(t.indexOf("iphone")>=0||t.indexOf("ipad")>=0)&&(document.addEventListener("touchmove",function(n){n.touches.length>1&&n.preventDefault()},{passive:!1}),document.addEventListener("touchend",function(t){var i=(new Date).getTime(),r;if(n=n||i+1,r=i-n,r<500&&r>0)return t.preventDefault(),!1;n=i},{passive:!1}),document.addEventListener("gesturestart",function(n){n.preventDefault()},{passive:!1}))}(function(){if(fixedIOS(),window.webVer){var n=getAbsoluteURL(location.pathname);n+="?t="+(new Date).getTime();getVersion(n,function(n){if(n){var t=n.toString().match(/window\.webVer\s*=\s*('|")(.*?)\1/);t&&(t=t[2]);console.log("v"+t);window.webVer!=t&&location.replace(getClearCacheUrl(location.href,"_t",t))}})}})();</script>
+<script>function getElementTop(n){for(var i=n.offsetTop,t=n.offsetParent;t!==null;)i+=t.offsetTop,t=t.offsetParent;return i}function scrollToEl(n,t,i){n&&(t&&(location.hash=(i?i:"Item")+t),window.scrollTo({top:getElementTop(n),behavior:"smooth"}))}function manualScrollEl(n,t){var i=scrollMenuList[n-1];scrollToEl(i,n-1,t)}function generateMenu(n){var r=document.getElementsByTagName("h2"),f=document.getElementById(n),u,t,i;if(f){for(u=document.createDocumentFragment(),t=0;t<r.length;t++)(function(){var i=r[t],f=t+1,n=document.createElement("li");n.innerText=i.innerText;n.className="menu_item";n.onclick=function(){scrollToEl(i,f)};u.appendChild(n)})(t);f.appendChild(u);i=Number(location.hash.replace(/#Item(\d+)$/i,"$1"));i>0&&r[i-1]&&setTimeout(function(){scrollToEl(r[i-1],i)},10)}}function generateScrollList(){for(var t,i,u=document.getElementsByTagName("div"),n=[],f=1,r=0;r<u.length;r++)t=u[r],t.className.indexOf("scroll_table")>-1&&(t["data-tag"]="ScrollItem"+f,n.push(t),f++);return i=Number(location.hash.replace(/#ScrollItem(\d+)$/i,"$1")),i>0&&n[i-1]&&setTimeout(function(){manualScrollEl(i,"ScrollItem")},10),scrollMenuList=n,n}var scrollMenuList=[];</script>
+</head>
+<body>
+
+<div class="agreement" id="agreement">
+    <div class="scroll_table">
+      <div class="scroller">
+        <div class="tit">系统权限使用清单</div>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr>
+              <th>权限名称</th>
+              <th>是否使用</th>
+              <th>权限功能说明</th>
+              <th class="last">权限使用场景/目的</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>麦克风/录音</td>
+              <td>有</td>
+              <td>此APP会在文生图录制语音时访问您的麦克风权限，用于上传用户文生图动态</td>
+              <td>文生图录制语音时访问您的麦克风权限，用于上传用户文生图动态，使用户的声音能被他人听到，如果拒绝开启，用户将无法使用麦克风/录音功能</td>
+            </tr>
+
+            <tr>
+              <td>通讯录</td>
+              <td>有</td>
+              <td>用于在用户允许情况下获取联系人信息</td>
+              <td>联系人列表</td>
+            </tr>
+            
+            <tr>
+              <td>存储/相册</td>
+              <td>有</td>
+              <td>此APP会在上传图片的服务中访问您的相册权限，用于上传头像、聊天、发布动态使用</td>
+              <td>用户头像</td>
+            </tr>
+
+            <tr>
+              <td>相机</td>
+              <td>有</td>
+              <td>用于拍摄头像</td>
+              <td>用户头像</td>
+            </tr>
+
+            <tr>
+              <td>获取设备信息</td>
+              <td>有</td>
+              <td>IDFA用于向您提供更契合您兴趣的广告信息，尽可能减少无关广告对您的侵扰。您可以禁止访问IDFA，您仍然会看到广告，您看到的广告数量不会变化，但广告的相关性会下降。</td>
+              <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+              <td>通知</td>
+              <td>有</td>
+              <td>请求向你推送通知</td>
+              <td>推送通知</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
